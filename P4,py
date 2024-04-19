@@ -1,0 +1,25 @@
+# Example_of_using_private_access_modifiersclass 
+class Student:
+    def __init__(self):
+        self.name = "Adams Boi"  # Public
+        self.__age = 39          # Private
+
+class Subject(Student):
+    pass
+
+# Object creation
+obj = Student()
+obj1 = Subject()
+
+# Accessing using object reference of Student class
+print(obj.name)  # No Error
+
+# Accessing using object reference of Subject class
+print(obj1.name) # No Error
+
+# Trying to access private member '__age'
+print(obj.__age)  # AttributeError
+print(obj1.__age)  # AttributeError
+
+
+
